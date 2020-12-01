@@ -1,0 +1,13 @@
+{
+  "collectionName": "components_informacion_mas_informacions",
+  "info": {
+    "name": "MasInformacion",
+    "icon": "info"
+  },
+  "options": {},
+  "attributes": {
+    "Link": {
+      "type": "string"
+    }
+  }
+}

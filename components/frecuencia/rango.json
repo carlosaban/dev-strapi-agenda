@@ -1,0 +1,16 @@
+{
+  "collectionName": "components_frecuencia_rangos",
+  "info": {
+    "name": "Rango",
+    "icon": "calendar-week"
+  },
+  "options": {},
+  "attributes": {
+    "Inicio": {
+      "type": "datetime"
+    },
+    "Fin": {
+      "type": "datetime"
+    }
+  }
+}

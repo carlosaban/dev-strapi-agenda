@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/agenda-master-area-tematicas",
+      "handler": "agenda-master-area-tematica.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/agenda-master-area-tematicas/count",
+      "handler": "agenda-master-area-tematica.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/agenda-master-area-tematicas/:id",
+      "handler": "agenda-master-area-tematica.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/agenda-master-area-tematicas",
+      "handler": "agenda-master-area-tematica.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/agenda-master-area-tematicas/:id",
+      "handler": "agenda-master-area-tematica.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/agenda-master-area-tematicas/:id",
+      "handler": "agenda-master-area-tematica.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

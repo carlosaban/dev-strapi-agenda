@@ -1,0 +1,13 @@
+{
+  "collectionName": "components_lugar_pucps",
+  "info": {
+    "name": "PUCP",
+    "icon": "university"
+  },
+  "options": {},
+  "attributes": {
+    "agenda_master_lugar_pucp": {
+      "model": "agenda-master-lugar-pucp"
+    }
+  }
+}

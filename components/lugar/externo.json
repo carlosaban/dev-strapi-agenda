@@ -1,0 +1,13 @@
+{
+  "collectionName": "components_lugar_externos",
+  "info": {
+    "name": "Externo",
+    "icon": "external-link-alt"
+  },
+  "options": {},
+  "attributes": {
+    "Ubicacion": {
+      "type": "string"
+    }
+  }
+}

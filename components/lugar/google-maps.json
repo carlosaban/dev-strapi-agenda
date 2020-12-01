@@ -1,0 +1,13 @@
+{
+  "collectionName": "components_lugar_google_maps",
+  "info": {
+    "name": "GoogleMaps",
+    "icon": "map-marker-alt"
+  },
+  "options": {},
+  "attributes": {
+    "URL": {
+      "type": "string"
+    }
+  }
+}

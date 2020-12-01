@@ -1,0 +1,17 @@
+{
+  "kind": "collectionType",
+  "collectionName": "test_editors",
+  "info": {
+    "name": "TestEditor"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "Detalle": {
+      "type": "richtext"
+    }
+  }
+}

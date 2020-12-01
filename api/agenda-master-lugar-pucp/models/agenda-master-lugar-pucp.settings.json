@@ -1,0 +1,20 @@
+{
+  "kind": "collectionType",
+  "collectionName": "agenda_master_lugar_pucps",
+  "info": {
+    "name": "AgendaMasterLugarPucp",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "Nombre": {
+      "type": "string",
+      "private": true,
+      "required": true
+    }
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "kind": "collectionType",
+  "collectionName": "agenda_master_etiquetas",
+  "info": {
+    "name": "AgendaMasterEtiqueta",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "Nombre": {
+      "type": "string",
+      "required": true,
+      "unique": true
+    }
+  }
+}

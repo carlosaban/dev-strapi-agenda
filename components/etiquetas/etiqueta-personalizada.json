@@ -1,0 +1,13 @@
+{
+  "collectionName": "components_etiquetas_etiqueta_personalizadas",
+  "info": {
+    "name": "EtiquetaPersonalizada",
+    "icon": "tag"
+  },
+  "options": {},
+  "attributes": {
+    "Etiqueta": {
+      "type": "string"
+    }
+  }
+}

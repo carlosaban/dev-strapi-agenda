@@ -1,0 +1,33 @@
+{
+  "kind": "collectionType",
+  "collectionName": "agenda_master_tipo_eventos",
+  "info": {
+    "name": "AgendaMasterTipoEvento",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "Nombre": {
+      "type": "string",
+      "unique": true,
+      "required": true
+    },
+    "TipoEvento": {
+      "type": "enumeration",
+      "enum": [
+        "EVE",
+        "SEM",
+        "CON",
+        "CHL"
+      ]
+    },
+    "agenda_evento": {
+      "via": "TipoEvento",
+      "model": "agenda-evento"
+    }
+  }
+}

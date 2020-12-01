@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/agenda-master-lugar-pucps",
+      "handler": "agenda-master-lugar-pucp.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/agenda-master-lugar-pucps/count",
+      "handler": "agenda-master-lugar-pucp.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/agenda-master-lugar-pucps/:id",
+      "handler": "agenda-master-lugar-pucp.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/agenda-master-lugar-pucps",
+      "handler": "agenda-master-lugar-pucp.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/agenda-master-lugar-pucps/:id",
+      "handler": "agenda-master-lugar-pucp.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/agenda-master-lugar-pucps/:id",
+      "handler": "agenda-master-lugar-pucp.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

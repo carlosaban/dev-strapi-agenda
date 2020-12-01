@@ -1,0 +1,84 @@
+{
+  "kind": "collectionType",
+  "collectionName": "agenda_eventos",
+  "info": {
+    "name": "AgendaEvento",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "Titulo": {
+      "type": "string"
+    },
+    "Descripcion": {
+      "type": "richtext"
+    },
+    "Costo": {
+      "type": "enumeration",
+      "enum": [
+        "GratuitoIngresoLibre",
+        "GratuitoIngresoConRegistro",
+        "costo"
+      ]
+    },
+    "LinkInscripcion": {
+      "type": "string"
+    },
+    "TransmisionEnVivo": {
+      "type": "string"
+    },
+    "NombreResponsable": {
+      "type": "string"
+    },
+    "CelularResponsable": {
+      "type": "string"
+    },
+    "Fechas": {
+      "type": "dynamiczone",
+      "components": [
+        "frecuencia.dia-especifico",
+        "frecuencia.rango"
+      ],
+      "min": 1,
+      "required": true
+    },
+    "Etiquetas": {
+      "type": "component",
+      "repeatable": false,
+      "component": "etiquetas.etiquetas"
+    },
+    "TipoEvento": {
+      "model": "agenda-master-tipo-evento",
+      "via": "agenda_evento"
+    },
+    "area_tematicas": {
+      "collection": "agenda-master-area-tematica"
+    },
+    "MasInformacion": {
+      "type": "component",
+      "repeatable": true,
+      "component": "informacion.mas-informacion"
+    },
+    "Lugar": {
+      "type": "dynamiczone",
+      "components": [
+        "lugar.externo",
+        "lugar.google-maps",
+        "lugar.pucp"
+      ]
+    },
+    "ImagenDestacada": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images"
+      ],
+      "plugin": "upload",
+      "required": false
+    }
+  }
+}

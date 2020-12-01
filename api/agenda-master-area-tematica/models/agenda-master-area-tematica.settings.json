@@ -1,0 +1,21 @@
+{
+  "kind": "collectionType",
+  "collectionName": "agenda_master_area_tematicas",
+  "info": {
+    "name": "AgendaMasterAreaTematica",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "Nombre": {
+      "type": "string",
+      "private": false,
+      "required": true,
+      "unique": true
+    }
+  }
+}

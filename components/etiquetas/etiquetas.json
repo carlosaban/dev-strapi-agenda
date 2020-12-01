@@ -1,0 +1,19 @@
+{
+  "collectionName": "components_etiquetas_etiquetas",
+  "info": {
+    "name": "Etiquetas",
+    "icon": "tags",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "Etiquetas": {
+      "collection": "agenda-master-etiqueta"
+    },
+    "EtiquetaPersonalizada": {
+      "type": "component",
+      "repeatable": true,
+      "component": "etiquetas.etiqueta-personalizada"
+    }
+  }
+}

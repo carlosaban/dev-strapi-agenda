@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/agenda-master-etiquetas",
+      "handler": "agenda-master-etiqueta.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/agenda-master-etiquetas/count",
+      "handler": "agenda-master-etiqueta.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/agenda-master-etiquetas/:id",
+      "handler": "agenda-master-etiqueta.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/agenda-master-etiquetas",
+      "handler": "agenda-master-etiqueta.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/agenda-master-etiquetas/:id",
+      "handler": "agenda-master-etiqueta.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/agenda-master-etiquetas/:id",
+      "handler": "agenda-master-etiqueta.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

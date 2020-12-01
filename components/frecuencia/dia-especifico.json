@@ -1,0 +1,20 @@
+{
+  "collectionName": "components_frecuencia_dia_especificos",
+  "info": {
+    "name": "DiaEspecifico",
+    "icon": "calendar-day",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "Fecha": {
+      "type": "date"
+    },
+    "Inicio": {
+      "type": "time"
+    },
+    "Fin": {
+      "type": "time"
+    }
+  }
+}
