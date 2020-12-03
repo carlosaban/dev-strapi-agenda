@@ -19,16 +19,20 @@ module.exports = {
   //
   // }
 
-  '30 * * * * *': () => {
+  '* * * * * *': () => {
     // Add your own logic here (e.g. send a queue of email, create a database backup, etc.).
-  console.log("cada 10 segundos");
-  console.log((new Date))
+  
+  strapi.log.fatal("fatal");
+  strapi.log.error("error");
+  strapi.log.warn("warn");
+  strapi.log.info("info");
+  strapi.log.trace("trace");
   },
 
   '0 55 18 * * *': () => {
     // Add your own logic here (e.g. send a queue of email, create a database backup, etc.).
   console.log("evento programado**********s");
-  console.log((new Date))
+  
   },
 
   
