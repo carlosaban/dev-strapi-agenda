@@ -10,7 +10,7 @@ module.exports = ({ env }) => ({
     },
   },
   cron:{
-    enabled:true
+    enabled:env ('ENABLED_CRON' , false)
   }
 
 });
