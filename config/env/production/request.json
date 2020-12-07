@@ -1,7 +1,7 @@
 {
     
     "logger": {
-    "level": "Info",
+    "level": "fatal",
     "exposeInContext": true,
     "requests": true
   }

@@ -8,8 +8,8 @@ module.exports = ({ env }) => ({
         host: env('DATABASE_HOST', '127.0.0.1'),
         port: env.int('DATABASE_PORT', 3306),
         database: env('DATABASE_NAME', 'dev-strapi-agenda'),
-        username: env('DATABASE_USERNAME', 'root'),
-        password: env('DATABASE_PASSWORD', 'pjxMAR23'),
+        username: env('DATABASE_USERNAME', ''),
+        password: env('DATABASE_PASSWORD', ''),
         ssl: env.bool('DATABASE_SSL', false),
       },
       options: {}
