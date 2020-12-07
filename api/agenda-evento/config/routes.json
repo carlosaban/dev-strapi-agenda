@@ -47,6 +47,22 @@
       "config": {
         "policies": []
       }
+    },
+    {
+      "method": "GET",
+      "path": "/agenda-eventos/list/week",
+      "handler": "agenda-evento.week",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/agenda-eventos/list/month",
+      "handler": "agenda-evento.month",
+      "config": {
+        "policies": []
+      }
     }
   ]
 }
