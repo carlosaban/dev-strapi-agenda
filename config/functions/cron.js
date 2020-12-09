@@ -19,9 +19,10 @@ module.exports = {
   //
   // }
 
-  '* * * * * *': () => {
+  '5 * * * * *': () => {
     // Add your own logic here (e.g. send a queue of email, create a database backup, etc.).
   
+  strapi.log.debug("cada 5 segundos");
   strapi.log.fatal("fatal");
   strapi.log.error("error");
   strapi.log.warn("warn");
