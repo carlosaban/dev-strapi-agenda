@@ -10,6 +10,7 @@ const { sanitizeEntity } = require("strapi-utils");
  */
 
 module.exports = {
+
   async week(ctx) {
     const entities = await strapi.query("agenda-evento").model.fetchAll();
 
@@ -258,4 +259,56 @@ module.exports = {
 
     return response;
   },
+  async listarEventosPorFechas(ctx) {
+
+    console.log("listarEventosPorFechas");
+    strapi.log.debug("en listarEventosPorFechas" );
+    const { fechaInicial , fechaFinal } = ctx.params;
+
+    console.log(" fechaInicial , fechaFinal "+ fechaInicial + fechaFinal );
+
+
+    const scriptquery = `
+                            select ev.Id 
+                            from agenda_eventos ev
+                            inner join agenda_eventos_components com on ev.id = com.agenda_evento_id and com.component_type ='components_frecuencia_rangos'
+                            inner join components_frecuencia_rangos rg on rg.id = com.component_id
+                            where 1=1
+                            AND(
+                              date(CONVERT_TZ(Inicio,'+00:00','-05:00'))  between '${fechaInicial}' and '${fechaFinal}'
+                                or date(CONVERT_TZ(Fin,'+00:00','-05:00'))  between  '${fechaInicial}' and '${fechaFinal}'
+                                or (
+                                      '${fechaInicial}' between date(CONVERT_TZ(Inicio,'+00:00','-05:00')) and date(CONVERT_TZ(Fin,'+00:00','-05:00'))
+                                        AND  '${fechaFinal}'  between date(CONVERT_TZ(Inicio,'+00:00','-05:00')) and date(CONVERT_TZ(Fin,'+00:00','-05:00'))
+                                )
+                            
+                            )
+                            union all
+                            select ev.Id 
+                            from agenda_eventos ev
+                            inner join agenda_eventos_components com on ev.id = com.agenda_evento_id and com.component_type ='components_frecuencia_dia_especificos'
+                            inner join components_frecuencia_dia_especificos rg on rg.id = com.component_id
+                            where 1=1
+                            and date(CONVERT_TZ(rg.Fecha,'+00:00','-05:00'))  between '${fechaInicial}' and '${fechaFinal}'
+                        `;
+
+   strapi.log.debug("scriptquery : " + scriptquery);
+    const rawBuilder = await strapi.connections.default.raw(scriptquery);
+    //strapi.log.debug(rawBuilder[0]);
+    const Ids = []
+    //strapi.log.debug("Ids: "  + Ids );
+
+      rawBuilder[0].forEach(element => {
+        Ids.push(element.Id);
+        strapi.log.debug("element.Id : " + element.Id);
+      });
+      
+      const resultado = await strapi.query("agenda-evento").find({"id_in": Ids });
+
+      console.dir(resultado);
+
+
+
+    return resultado;
+  }
 };

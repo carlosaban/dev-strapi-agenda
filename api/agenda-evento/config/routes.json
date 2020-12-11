@@ -63,6 +63,14 @@
       "config": {
         "policies": []
       }
+    },
+    {
+      "method": "GET",
+      "path": "/agenda-eventos/listar/:fechaInicial/:fechaFinal",
+      "handler": "agenda-evento.listarEventosPorFechas",
+      "config": {
+        "policies": []
+      }
     }
   ]
 }

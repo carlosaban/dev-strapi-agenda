@@ -5,7 +5,7 @@
       "path": "/test-editors",
       "handler": "test-editor.find",
       "config": {
-        "policies": []
+        "policies": ["global::isLoggedIn"]
       }
     },
     {

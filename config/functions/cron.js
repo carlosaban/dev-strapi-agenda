@@ -28,6 +28,7 @@ module.exports = {
   strapi.log.warn("warn");
   strapi.log.info("info");
   strapi.log.trace("trace");
+
   },
 
   '0 55 18 * * *': () => {
