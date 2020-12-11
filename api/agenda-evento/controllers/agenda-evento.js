@@ -261,8 +261,7 @@ module.exports = {
   },
   async listarEventosPorFechas(ctx) {
 
-    console.log("listarEventosPorFechas");
-    strapi.log.debug("en listarEventosPorFechas" );
+    strapi.log.debug("listarEventosPorFechas iniciando" );
     const { fechaInicial , fechaFinal } = ctx.params;
 
     console.log(" fechaInicial , fechaFinal "+ fechaInicial + fechaFinal );
@@ -308,7 +307,10 @@ module.exports = {
       console.dir(resultado);
 
 
+      strapi.log.debug("listarEventosPorFechas finalizado" );
 
-    return resultado;
+
+
+    return  sanitizeEntity(resultado, { model: strapi.models["agenda-evento"] });;
   }
 };
